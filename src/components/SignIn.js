@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import AppBar from 'material-ui/AppBar';
 import { firebaseApp } from '../firebase';
 import FlatButton from 'material-ui/FlatButton';
+import BottomNav from './BottomNav';
 
 class SignIn extends Component {
 	constructor(props){
@@ -37,12 +38,22 @@ class SignIn extends Component {
 				}}
 			  	title="Tracker" 
 				showMenuIconButton={false}
+					iconElementRight={
+					<Link to="/signup"> 
+	   					<FlatButton 
+	   					label="Sign Up" 
+	   					style={{color:'#fff', lineHeight: '25px', height: '25px', marginTop: '0px'}}
+	   					/>
+	   				</Link>}
 			  />
 				<div className="signin-wrapper">
-					<form>
+					<form style={{ marginTop: '100px'}}>
 					    <TextField
 		      				inputStyle={{}}
+		      				style={{display: 'block', margin: 'auto'}}
 		      				floatingLabelText="Email"
+		      				underlineFocusStyle={{borderColor: '#455A64'}}
+      						floatingLabelFocusStyle ={{color: '#455A64'}}
 		      				onChange={e => this.setState({email: e.target.value})}
 		   					errorText={this.state.err.message}
 		   					onKeyPress={ e => {
@@ -54,8 +65,11 @@ class SignIn extends Component {
 		   				/>
 		   				<TextField
 		      				inputStyle={{}}	
+		      				style={{display: 'block', margin: 'auto'}}
 		      				floatingLabelText="Password"
       						type="password"
+      						underlineFocusStyle={{borderColor: '#455A64'}}
+      						floatingLabelFocusStyle ={{color: '#455A64'}}
       						errorText={this.state.err.message}
       						onChange={e => this.setState({password: e.target.value})}
 		   					onKeyPress={ e => {
@@ -66,20 +80,16 @@ class SignIn extends Component {
       					}}
 		   				/>
 		   			 <RaisedButton label="Sign In"  
-	   				  backgroundColor='#212121'
+	   				  backgroundColor='#2E7D32'
 	   				  labelColor='#ffffff'
-	   				  style={{display: 'block', width: '200px', margin: '20px auto auto auto'}}
+	   				  style={{display: 'block', width: '200px', margin: '50px auto auto auto'}}
 	   				   onClick={() => this.signIn()}
 	   				   />
 	   				</form>
 
-	   				<Link to="/signup"> 
-	   					<FlatButton 
-	   					label="Sign Up Here" 
-	   					style={{position: 'fixed', top: '20px', right: '20px', marginTop: '20px'}}
-	   					/>
-	   				</Link>
+	   			
 				</div>
+					   <BottomNav/>
 			</MuiThemeProvider>
 		)
 	}

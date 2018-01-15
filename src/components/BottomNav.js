@@ -17,7 +17,7 @@ class BottomNav extends Component {
   render() {
     return (
       <Paper zDepth={1}>
-        <BottomNavigation style={{height: 40, position: 'fixed', bottom: 0, color:'#fff', backgroundColor: '#212121'}}
+        <BottomNavigation style={{height: 40, position: 'absolute', bottom: 0, color:'#fff', backgroundColor: '#212121'}}
    
         >
           <BottomNavigationItem

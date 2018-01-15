@@ -1,6 +1,12 @@
+html{
+	    position: relative;
+    min-height: 100%;
+}
+
 body{
 	margin: 0;
 	font-family: 'Roboto', 'sans-serif';
+
 }
 
 
@@ -22,6 +28,7 @@ h2{
 
 form{
 	margin: auto;
+
 }
 
 .bottom-nav > div >  div{

@@ -34,7 +34,7 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router history={history}>
 			<div>
-				<Route exact path="/" component={SignIn} />
+				<Route exact path="/" component={SignUp} />
 				<Route path="/app" component={App} />
 				<Route path="/signin" component={SignIn} />
 				<Route path="/signup" component={SignUp} />

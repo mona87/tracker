@@ -23,10 +23,12 @@ class AddTask extends Component {
 		 <TextField
 			style={{display:'block', margin:'auto'}}
 			floatingLabelText="Add a task"
+			underlineFocusStyle={{borderColor: '#455A64'}}
+      		floatingLabelFocusStyle ={{color: '#455A64'}}
 			onChange={e => this.setState({title: e.target.value})}
 		/>
 		 <RaisedButton label="Submit"  
-		  backgroundColor='#212121'
+		  backgroundColor='#2E7D32'
 		  labelColor='#ffffff'
 		  style={{display: 'block', width: '200px', margin: '20px auto 50px auto'}}
 		   onClick={() => this.addTask()}

@@ -19,16 +19,13 @@ class TaskList extends Component {
 		})
 	}
 	render(){
-		console.log('props',this.props.tasks)
+		// console.log('props',this.props.tasks)
 		return(
 			<div style={{margin: '0 20px 100px 20px'}}>{ this.props.tasks.map((task, i) => {
 				return(
-
 					<TaskItem key={i} task={task} />
 				)
-			})
-			}
-
+				})}
 			</div>
 
 		);

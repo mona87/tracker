@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import AppBar from 'material-ui/AppBar';
 import { firebaseApp } from '../firebase';
 import FlatButton from 'material-ui/FlatButton';
+import BottomNav from './BottomNav';
 
 class SignUp extends Component {
 	constructor(props){
@@ -37,36 +38,45 @@ class SignUp extends Component {
 				}}
 			  	title="Tracker" 
 				showMenuIconButton={false}
+					iconElementRight={
+	   				<Link to="/signin"> 
+	   					<FlatButton 
+	   					label="Sign In" 
+	   					style={{color: '#fff',marginTop: '0px',  lineHeight: '25px', height: '25px'}}
+	   					/>
+	   				</Link>}
 			  />
 				<div className="signin-wrapper">
-					<form>
+					<form style={{ marginTop: '100px'}}>
 					    <TextField
 		      				inputStyle={{}}
+		      				style={{display: 'block', margin: 'auto'}}
 		      				floatingLabelText="Email"
+		      				underlineFocusStyle={{borderColor: '#455A64'}}
+      						floatingLabelFocusStyle ={{color: '#455A64'}}
 		      				onChange={e => this.setState({email: e.target.value})}
 		   					errorText={this.state.err.message}
 		   				/>
 		   				<TextField
 		      				inputStyle={{}}	
+		      				style={{display: 'block', margin: 'auto'}}
+		      				underlineFocusStyle={{borderColor: '#455A64'}}
+      						floatingLabelFocusStyle ={{color: '#455A64'}}
 		      				floatingLabelText="Password"
       						type="password"
       						errorText={this.state.err.message}
       						onChange={e => this.setState({password: e.target.value})}
 		   				/>
 		   			 <RaisedButton label="Sign Up"  
-	   				  backgroundColor='#212121'
+	   				  backgroundColor='#2E7D32'
 	   				  labelColor='#ffffff'
-	   				  style={{display: 'block', width: '200px', margin: '20px auto auto auto'}}
+	   				  style={{display: 'block', width: '200px', margin: '50px auto auto auto'}}
 	   				   onClick={() => this.signUp()}
 	   				   />
 	   				</form>
-	   				<Link to="/signin"> 
-	   					<FlatButton 
-	   					label="Sign In" 
-	   					style={{position: 'fixed', top: '20px', right: '20px', marginTop: '20px'}}
-	   					/>
-	   				</Link>
+
 				</div>
+					   <BottomNav/>
 			</MuiThemeProvider >
 		)
 	}

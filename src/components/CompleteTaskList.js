@@ -23,7 +23,7 @@ class CompleteTaskList extends Component {
 	}
 	render(){
 		return (
-			<div style={{margin: '0 20px 100px 20px'}}>{this.props.completeTasks.map((completeTask, i) =>{
+			<div style={{margin: '0 20px 50px 20px'}}>{this.props.completeTasks.map((completeTask, i) =>{
 				const { title, email} = completeTask;
 				return(
 
@@ -48,7 +48,7 @@ class CompleteTaskList extends Component {
    			 <RaisedButton 
 	   			 label="Clear All"  
 				  backgroundColor='#B71C1C'
-				  style={{display: 'block', width: '200px', margin: '20px auto auto auto', color:'#fff'}}
+				  style={{display: 'block', width: '200px', margin: '50px auto auto auto', color:'#fff'}}
 				  onClick={() => this.clearCompleted()}
 				 />
 		</div>

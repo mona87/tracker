@@ -32,7 +32,7 @@ class TaskItem extends Component {
 					<div><em>submitted by {email}</em></div>					
 				</CardText>
 			<FlatButton
-				style={{marginRight: '20px'}}
+				style={{marginRight: '20px', color:'#66BB6A'}}
 				label="Complete"
 				onClick={() => this.completeGoal()}
 			>
